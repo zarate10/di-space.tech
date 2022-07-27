@@ -18,7 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include("web.urls"))
-    
 ]
 
 handler404 = "web.views.page_not_found_view"

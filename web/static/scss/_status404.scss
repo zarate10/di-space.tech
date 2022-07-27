@@ -1,0 +1,16 @@
+@import './variables';
+
+.container__not_found { 
+    @include start_section();
+    @include center_all(column);
+   
+    h1 {
+        font-size: calc(4em + 4vw);
+        @include text-gradient(white);
+        font-weight: 700;
+    }
+    p {
+         padding: 30px;
+    }
+
+}

@@ -27,4 +27,7 @@ def contacto(req):
     })
 
 def page_not_found_view(req, exception):
-    return render(req, 'web/404.html', status=404)
+    return render(req, 'web/404.html', {
+        "titulo": '404',
+        "descripcion": '...'
+    }, status = 404)

@@ -43,6 +43,7 @@ botonToggle.addEventListener('click', () => {
         $logo.setAttribute('style', 'filter: invert(4000)')
         $contenedorMenu.style.display = 'flex'
         $contenedorMenu.style.transition = 'visibility 0s, opacity 1s'
+        document.body.style.overflow = 'hidden';
         setTimeout(() => {            
             $contenedorMenu.style.visibility = 'visible'
             $contenedorMenu.style.opacity = '1'
@@ -53,6 +54,7 @@ botonToggle.addEventListener('click', () => {
         $contenedorMenu.style.transition = 'visibility 1s, opacity 1s'
         $contenedorMenu.style.visibility = 'hidden'
         $contenedorMenu.style.opacity = '0'
+        document.body.style.overflowY = 'scroll';
         setTimeout(() => {            
             $contenedorMenu.style.display = 'none'
         }, 700);
@@ -60,6 +62,6 @@ botonToggle.addEventListener('click', () => {
     
 })
 
-document.addEventListener('DOMContentLoaded', () => {
-})
+// document.addEventListener('DOMContentLoaded', () => {
+// })
 
