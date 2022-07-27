@@ -1,0 +1,27 @@
+@media (max-width: 768px) { 
+    body {
+        padding: 0 2rem;
+    }
+    
+    /* Menú abierto */
+
+    header ul li a { 
+        font-size: 2em;
+        padding: .5rem;
+        line-height: 0px;
+    }
+}
+@media (max-width: 640px){
+    /* Menú abierto */
+    header .menu-options .left { 
+        padding: 0 2rem;
+        font-size: 2rem;
+        width: 100%;
+    }
+    header ul li a {
+        padding: .9rem;
+    }
+    header .menu-options .right { 
+        display: none;
+    }
+}

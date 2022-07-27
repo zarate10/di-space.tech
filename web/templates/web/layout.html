@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- META TAGS PARA EL POSICIONAMIENTO -->
+        <meta name="author" content="Di Space Tech">
+        <meta name="keywords" content="DI SPACE TECH, REPARACIÓN DE CELULARES, VILLA GESELL, DI SPACE, DI SPACE, DIPACCE, AVE CELULARES, AVE, SITIOS WEB GESELL, CREACIÓN DE SITIOS WEB, villa gesell, gesell, reparacion notebooks, pc, di space tech, tech, tablet, celular, css, html, se rompio mi celular, telefono, electronica, cambio modulo, modulo celular, samsung, xiaomi, lg, nokia, phone, argentina, buenos aires, la costa, costa atlantica, maps, 2022, verano, pantalla rota, branding, community management, desarrollo web, pagina web, armado pc, pin de carga, telefono roto, memoria ram, compu lenta, notebook lenta, netbook lenta, netbuk, donde arreglar mi compu, pínamar, carilo, mar de las pampas, ostende, valeria del mar, celular, telefono, android, ios, gamer, ssd, hdd, Tech, tech, di, space, Space, DI, di-space, technology, dispace, space, espacio, tecnologia " />
+        <meta http-equiv="description" name="description" content="{{ descripcion }}">
+        <meta name="Copyright" content="Di Space Tech">
+        <meta name="theme-color" content="#060712"/>
+        <!-- ICONO -->
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon.ico">
+        <link rel="apple-touch-icon"sizes="16x16" href="./assets/img/favicon.ico">
+        <!-- FONT AWESOME LINKS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- LINK CANÓNICO (MEJORAR EL RASTREO DE LA WEB) -->
+        <link rel="canonical" href="https://www.di-space.tech"/>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+        <title>Di Space Tech — {{ titulo }}</title>
+</head>
+<body>
+    
+    <div class="cursor"></div>
+    <div class="cursor-out"></div>
+
+    <header>
+        <div class="logo">
+           <img src="{% static 'media/IMAGOLOGO.svg' %}" id="logo" alt="">
+        </div>
+        <nav>
+            <a class="icon-menu">
+                <div class="line" style="width: 60%;" id="line1"></div>
+                <div class="line" style="width: 30%;" id="line2"></div>
+                <div class="line2" style="width: 60%;" id="line1"></div>
+                <div class="line2" style="width: 30%;" id="line2"></div>
+              </a>
+            <div class="menu-options">   
+                
+                <div class="left">
+                    <ul class="nav-lg">
+                        <li>
+                            <a href="{% url 'Inicio' %}" class="{% if titulo == 'Inicio'%}activate_nav{% endif %}">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'Servicios' %}" class="{% if titulo == 'Servicios'%}activate_nav{% endif %}">Servicios</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'Nosotros' %}" class="{% if titulo == 'Nosotros'%}activate_nav{% endif %}">Nosotros</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'Contacto' %}" class="{% if titulo == 'Contacto'%}activate_nav{% endif %}">Contacto</a>
+                        </li>
+                    </ul> 
+                </div>
+                <div class="right">
+                    <div class="info-menu">
+                        <h1>Contacto</h1>
+                        <p>Argentina, Villa Gesell</p>
+                        <p><a href="mailto:contacto@di-space.tech" target="_blank">contacto@di-space.tech</a></p>
+                        <p><a href="mailto:contacto@di-space.tech" target="_blank">Paseo 105, Av. 3</a></p>
+
+                        <div class="redes">
+                            <p><a href="#" target="_blank">Instagram</a></p>
+                            <p><a href="#" target="_blank">Facebook</a></p>
+                            <p><a href="#" target="_blank">Linkedin</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    {% block body %}
+    {% endblock %}
+
+    <script src="{% static 'js/app.js' %}"></script>   
+</body>
+</html>

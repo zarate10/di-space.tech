@@ -1,0 +1,34 @@
+{% load static%}
+<!-- Créditos de diseño a quién corresponda -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '404.css'%}">
+    <script>
+        document.addEventListener('keydown', (ev) => {
+            if (ev){
+                window.location.href = '{% url "Inicio" %}' 
+            }
+        });
+        </script>
+</head>
+<body>
+    <div class="noise"></div>
+    <div class="overlay"></div>
+    <div class="terminal">
+        <img src="{% static 'media/IMAGOLOGO.svg'%}" alt="" id="logo">
+        <img src="{% static 'media/IMAGOLOGO.svg'%}" alt="" id="logo2">
+        <h1>Error <span class="errorcode">404</span></h1>
+        <p class="output">Página no encontrada.</p>
+        <p class="output">Si cree que es un error, contáctese con el <a href="mailito:contacto@di-space.tech">Administrador</a>.</p>
+        <h3>------------------------------------------------------------</h3>
+        <p class="output">Presione cualquier tecla para volver al <a href="{% url 'Inicio' %}">inicio</a></p>
+        
+    </div>
+    
+</body>
+</html>
