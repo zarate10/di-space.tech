@@ -5,9 +5,10 @@
 <div class="container__not_found">
 
     <h1>404</h1>
-    <p>Página no encontrada</p>
-    <a href="{% url 'Inicio' %}" id="back">Inicio</a>
-
+    <p class="notfound">Página no encontrada</p>
+    <p>La página que buscas no existe. Es posible que se haya movido o eliminado por completo. Intente buscar en otra página o regrese a la página de inicio del sitio web para encontrar lo que está buscando.</p>
+    <button onclick="location.href='{% url 'Inicio' %}'">Volver al inicio</button>
+ 
 </div>
 
 {% endblock %}

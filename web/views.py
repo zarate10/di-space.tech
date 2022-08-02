@@ -20,14 +20,9 @@ def nosotros(req):
         "descripcion": '...'
     })
 
-def contacto(req):
-    return render(req, "web/contacto.html", {
-        "titulo": 'Contacto',
-        "descripcion": '...'
-    })
-
 def page_not_found_view(req, exception):
     return render(req, 'web/404.html', {
         "titulo": '404',
+        # "url": '{% url "Inicio" %}',
         "descripcion": '...'
     }, status = 404)

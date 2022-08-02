@@ -22,16 +22,13 @@
         <title>Di Space Tech — {{ titulo }}</title>
 </head>
 <body>
-    
-    <div class="cursor"></div>
-    <div class="cursor-out"></div>
 
     <header>
-        <div class="logo">
-           <img src="{% static 'media/IMAGOLOGO.svg' %}" id="logo" alt="">
+        <div class="logo {% if titulo == 'Inicio'%}filter-white{% endif %}">
+           <img src="{% static 'media/IMAGOLOGO.svg' %}" id="logo" alt="LOGO DI-SPACE TECH">
         </div>
         <nav>
-            <a class="icon-menu">
+            <a class="icon-menu {% if titulo == 'Inicio'%}filter-white{% endif %}">
                 <div class="line" style="width: 60%;" id="line1"></div>
                 <div class="line" style="width: 30%;" id="line2"></div>
                 <div class="line2" style="width: 60%;" id="line1"></div>
@@ -49,9 +46,6 @@
                         </li>
                         <li>
                             <a href="{% url 'Nosotros' %}" class="{% if titulo == 'Nosotros'%}activate_nav{% endif %}">Nosotros</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'Contacto' %}" class="{% if titulo == 'Contacto'%}activate_nav{% endif %}">Contacto</a>
                         </li>
                     </ul> 
                 </div>
@@ -72,10 +66,55 @@
             </div>
         </nav>
     </header>
+    <div class="back-to-top">
+        <button id="btt"><span></span>SUBIR</button>
+    </div>
 
     {% block body %}
     {% endblock %}
 
+    <footer>
+        <div class="wrapper_main">
+            <div class="logo">
+                <img src="{% static 'media/IMAGOLOGO.svg' %}" id="logo" alt="LOGO DI-SPACE TECH">
+            </div>
+            <div class="container_info">
+                <div class="box">
+                    <div class="title">Contacto</div>
+                    <a href="">Whatsapp</a>
+                    <a href="">contacto@di-space.tech</a>
+                </div>
+                <div class="box">
+                    <div class="title">Navegación</div>
+                    <a href="{% url 'Inicio' %}" class="{% if titulo == 'Inicio'%}activate_nav{% endif %}">Inicio</a>
+                    <a href="{% url 'Servicios' %}" class="{% if titulo == 'Servicios'%}activate_nav{% endif %}">Servicios</a>
+                    <a href="{% url 'Nosotros' %}" class="{% if titulo == 'Nosotros'%}activate_nav{% endif %}">Nosotros</a>
+                </div>
+                <div class="box">
+                    <div class="title">Redes</div>
+                    <a href="#" target="_blank">Instagram</a>
+                    <a href="#" target="_blank">Facebook</a>
+                    <a href="#" target="_blank">Linkedin</a>
+                </div>
+                <div class="box newsletter">
+                    <h2>Newsletter</h2>
+                    <form action="">
+                        <input type="email" name="email" id="email" placeholder="Correo electrónico">
+                        <button><span></span>Suscribirme</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="map">
+            <iframe width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=en&amp;q=Villa%20Gesell+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+        </div>
+    </footer>
+    <script>
+        window.data = {
+            title: '{{ titulo }}'
+        }
+    </script>
+    <script src="{% static 'js/sreveal.js' %}"></script> 
     <script src="{% static 'js/app.js' %}"></script>   
 </body>
 </html>

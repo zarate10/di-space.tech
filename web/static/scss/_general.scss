@@ -10,18 +10,32 @@
     margin: 0;
     font-family: 'Archivo', sans-serif;
     list-style: none;
-    cursor: none;
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth; 
+}
 body {
     overflow-x: hidden;
     width: 100%;
     height: 100%;
+    position: relative;
+    min-height: 100vh;
 }
-
-@include hypertext_reference(white);
-
+button {
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+a { 
+    cursor: pointer;
+}
+.filter-white {
+    filter: invert(4000);
+}
+/*
 .cursor { 
     position: fixed;
     width: 12px;
@@ -42,11 +56,61 @@ body {
     margin-left: -15px;
     z-index: -1500;
 }
-
+*/
 
 .activate_nav {
     background: -webkit-linear-gradient(right, $m1, $m2);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+.title_light{
+    @include title_light();
+}
+.title{
+    @include title();
+}
+.descrip { 
+    @include p();
+}
+html::-webkit-scrollbar {
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+    background: black;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: rgb(41, 41, 41);
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+html::-webkit-scrollbar-thumb:hover {
+    background: #212121;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+html::-webkit-scrollbar-thumb:active {
+    background: #212121;
+}
+.back-to-top{
+    position: fixed;
+    width: 200px;
+    height: 30px;
+    z-index: 1000;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    margin-right: calc(-60px + 1vw);
+    // margin-bottom: calc(100px + 1vh);
+    margin-bottom: -100vh;
+    transform: rotate(-90deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1.5s ease;
+    button {
+        @include button-width(gray, gray);
+    }
 }

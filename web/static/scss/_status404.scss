@@ -2,15 +2,27 @@
 
 .container__not_found { 
     @include start_section();
-    @include center_all(column);
-   
+    @include center_all();
+    flex-direction: column;
+    text-align: center;
     h1 {
-        font-size: calc(4em + 4vw);
+        font-size: calc(2em + 4vw);
         @include text-gradient(white);
         font-weight: 700;
     }
-    p {
-         padding: 30px;
+    .notfound {
+        font-family: "Syne", sans-serif;
+        font-size: 1.8em;
     }
-
+    p { 
+        margin: 10px 0;
+        max-width: 65ch;
+        letter-spacing: .5px;
+        padding: 0 2rem;
+    }
+    button { 
+        @include button-line();
+        margin: 30px;
+    }
+    
 }

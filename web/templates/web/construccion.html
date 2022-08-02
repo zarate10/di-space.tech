@@ -1,0 +1,10 @@
+{% block construccion %}
+    <div class="wrapper-construccion">
+        <h1><span>En construcción,</span><br> estamos trabajando</h1>
+    </div>
+    <script>
+        setTimeout(() => {
+            location.href = '{% url 'Inicio' %}'
+        }, 5000)
+    </script>
+{% endblock %}

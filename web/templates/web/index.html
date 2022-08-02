@@ -1,3 +1,70 @@
 {% extends "web/layout.html" %}
-
+{% load static %}
 {% block title %}Inicio{% endblock %}
+
+{% block body %}
+    <section class="main-wrapper-index">
+        <canvas id="canvas" width="32" height="32" ></canvas>
+        <div class="bgruido"></div>
+        <div class="info-wrapper">
+            <div class="texts">
+                <h1>Brindamos más servicios</h1>
+                <h1>Brindamos más calidad</h1>
+                <h1>Brindamos personal calificado</h1>
+            </div>
+        </div>
+        <div class="box-scroll">
+            <a href="#rservices">scroll</a>
+        </div>
+    </section>
+    <section class="resume-services" id="rservices">
+        <div class="box left">
+            <img src="{% static 'media/phone.png' %}" alt="">
+        </div>
+        <div class="box right">
+            <div class="info">
+                <p>Hardware</p>
+                <h1>Lorem ipsum dolor sit amet consectetur adispdf.</h1>
+                <div class="description">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus alias rem earum iste quidem, omnis nemo quis deleniti odit libero saepe laboriosam doloribus enim! Ex perferendis ea provident nobis magnam.</p>
+                </div>
+                <button>Consultar</button>
+            </div>
+        </div>
+    </section>
+    <section class="resume-hw">
+        <video muted autoplay loop>
+            <source src="{% static 'media/video/hardware_bg.mp4'%}">
+        </video>
+        <div class="info">
+            <p class="title_light">Hardware</p>
+            <h1 class="title">Lorem ipsum dolor sit amet.</h1>
+            <p class="descrip">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia repellendus ullam neque voluptatum asperiores itaque porro est inventore, voluptatem vero, esse recusandae totam maxime voluptatibus iusto debitis.</p>
+            <button class="toTop">Consultar</button>
+        </div>
+    </section>
+    <section class="resume-software">
+        <p class="title_light">Software</p>
+        <h1 class="title">Impulsamos tu negocio<br>¿Cómo lo hacemos?</h1>
+        <div class="boxes">
+            <div class="box" id="boxinfo1">
+                <div class="count">01</div>
+                <div class="how">Branding y línea gráfica</div>
+                <div class="descrip">Ideamos y diseñamos tu marca y/o línea gráfica, a través del análisis de la competencia.</div>
+                <button><span></span>Consultar</button>
+            </div>
+            <div class="box" id="boxinfo2">
+                <div class="count">02</div>
+                <div class="how">Community management</div>
+                <div class="descrip">Gestionamos tus redes, le damos una imagen atractiva  y un perfil profesional. Posteriormente la publicitamos, incrementando el público.</div>
+                <button><span></span>Consultar</button>
+            </div>
+            <div class="box" id="boxinfo3">
+                <div class="count">03</div>
+                <div class="how">Diseño y desarrollo web</div>
+                <div class="descrip">Diseñamos, desarrollamos y ponemos en línea tu sitio web. Completamente accesible y con el mejor posicionamiento para aparecer primero en el motor de búsqueda de Google.</div>
+                <button><span></span>Consultar</button>
+            </div>
+        </div>
+    </section>
+{% endblock %}
