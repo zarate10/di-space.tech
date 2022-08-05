@@ -8,17 +8,19 @@
         </div>
         <div class="info-right">
             <p class="title_light">{{ titulo }}</p>
-            <h1 class="title">{{ data.principal }}</h1>
+            <div class="container">
+                <h1 class="title">{{ data.principal }}</h1>
+            </div>
             <div class="descrip">Haga click en cualquiera de las siguientes opciones para consultar.</div>
             <div class="box-buttons">
                 {% for el in data.items %}
-                    <button onclick="viewData('{{ el.titulo }}', '{{ el.img }}', '{{ el.alt }}', '{{ el.descrip }}', '{{ el.tiempo }}', '{{ el.precio }}')">{{ el.titulo }}</button>
+                    <button onclick="viewData('{{ el.titulo }}', '{{ el.img }}', '{{ el.alt }}', '{{ el.descrip }}', '{{ el.tiempo }}', '{{ el.precio }}', '{{ el.consulta }}')">{{ el.titulo }}</button>
                 {% endfor %}
             </div>
         </div>
     </div>
     <div class="servicio-detalle">
-        <div class="box">
+        <div class="box" id="sd-wrapper">
             <p class="title" id="sd-titulo"></p>
             <div class="img-box">
                 <img id="sd-img">
@@ -34,7 +36,7 @@
             
             <div class="container-buttons">
                 <button id="cerrar">atrás</button>
-                <button>contactarse</button>
+                <a id="sd-contacto" target="_blank">consultar vía whatsapp</a>
             </div>
         </div>
     </div>
