@@ -1,0 +1,165 @@
+@import './variables';
+
+.servicios-wrapper-main { 
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    .left {
+        width: 30vw;
+        min-height: 100vh;
+        background: linear-gradient(13deg, #ffb56a, #ff1940, #8fb5ff);
+        background-size: 600% 600%;
+        position: relative;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        -webkit-animation: bgradient 14s ease infinite;
+        -moz-animation: bgradient 14s ease infinite;
+        -o-animation: bgradient 14s ease infinite;
+        animation: bgradient 14s ease infinite;
+    }
+    .info {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .info-left{
+            width: 50%;
+            max-height: 100vh;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 60%;
+                z-index: 11;
+            }
+        }
+        .info-right { 
+            width: 50%;
+            height: 100%;
+            max-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .box-buttons {
+                width: 100%;
+                max-width: 600px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                button {
+
+                    @include button-line();
+                    width: 250px;
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: 0;
+                }
+            }
+            .descrip {
+                padding: 0 0 30px 0;
+            }
+            .title {
+                max-width: 14ch;
+            }
+        }
+    }
+    .servicio-detalle {
+        top: 0;
+        right: 0;
+        position: absolute;
+        width: 70%;
+        height: 100%;
+        z-index: 10;
+        transition: 2s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: -100vw;
+        background: white;
+        .box {
+            width: 600px;
+            height: 100vh;
+            background: white;
+            padding: 8vh 0 0 0;
+            position: relative;
+            flex-direction: column;
+            text-align: left;
+     
+            .container-buttons {
+                width: 100%;
+                display: flex;
+                position: absolute;
+                bottom: 0;
+                justify-content: space-between;
+                z-index: 10000000;
+         
+                button {
+                    width: 120px;
+                    padding: 15px;
+                    font-size: 1.1em;
+                    margin-bottom: 30px;
+                }
+            }
+            .img-box {
+                width: 100%;
+                height: 100px;
+                background: red;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .descrip {
+                padding: 30px 0;
+            }
+            .data-wrapper {
+                .data {
+                    padding: 5px 0px;
+                    text-transform: uppercase;
+                    color: gray;
+                    font-size: 14px;
+                    font-weight: 400;
+                    div {
+                        color: black;
+                    }
+                    line-height: 2px;
+                }
+                padding: 10px 0px;
+            }
+        }
+    }
+}
+
+
+
+
+@-webkit-keyframes bgradient {
+    0%{background-position:0% 99%}
+    50%{background-position:100% 2%}
+    100%{background-position:0% 99%}
+}
+@-moz-keyframes bgradient {
+    0%{background-position:0% 99%}
+    50%{background-position:100% 2%}
+    100%{background-position:0% 99%}
+}
+@-o-keyframes bgradient {
+    0%{background-position:0% 99%}
+    50%{background-position:100% 2%}
+    100%{background-position:0% 99%}
+}
+@keyframes bgradient {
+    0%{background-position:0% 99%}
+    50%{background-position:100% 2%}
+    100%{background-position:0% 99%}
+}
+
+
+
+
+

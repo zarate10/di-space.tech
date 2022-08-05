@@ -1,0 +1,79 @@
+@import './variables';
+.redes-wrapper {
+    width: 100%;
+    height: 100vh;
+    background: $n1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .logo { 
+        width: 130px;
+        height: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(37deg, #060712, #ff1940, #8fb5ff, #060712, #060712, #060712);
+        background-size: 1200% 1200%;
+    
+        -webkit-animation: bggradientperfil 7s ease infinite;
+        -moz-animation: bggradientperfil 7s ease infinite;
+        -o-animation: bggradientperfil 7s ease infinite;
+        animation: bggradientperfil 7s ease infinite;
+        
+        border-radius: 100%;
+        img {
+            width: 50px;
+            filter: invert(1);
+            
+        }
+    }
+    .links { 
+        margin-top: 70px;
+        max-width: 500px;
+        height:40%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+        width: 80%;
+        a {
+            width: 100%;
+            text-align: center;
+            padding: 17px;
+            border: 1px solid  #82aaf90e;
+            background-size: 1200% 1200%;            
+            color: gray;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 10px;
+            &:hover {
+                color:white;
+                border: 1px solid  #82aaf993;
+            }
+        }
+    }
+}
+
+@-webkit-keyframes bggradientperfil {
+    0%{background-position:0% 23%}
+    50%{background-position:100% 78%}
+    100%{background-position:0% 23%}
+}
+@-moz-keyframes bggradientperfil {
+    0%{background-position:0% 23%}
+    50%{background-position:100% 78%}
+    100%{background-position:0% 23%}
+}
+@-o-keyframes bggradientperfil {
+    0%{background-position:0% 23%}
+    50%{background-position:100% 78%}
+    100%{background-position:0% 23%}
+}
+@keyframes bggradientperfil {
+    0%{background-position:0% 23%}
+    50%{background-position:100% 78%}
+    100%{background-position:0% 23%}
+}

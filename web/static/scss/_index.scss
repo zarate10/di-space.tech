@@ -70,8 +70,8 @@
     flex-wrap: wrap;
     padding: 0px 4rem;
     .box {
-        width: 600px;
-        height: 600px;
+        width: 400px;
+    
         display: flex;
         align-items: center;
     }
@@ -238,6 +238,15 @@
 
 
 @media (max-width: 768px) { 
+    .resume-services {
+        padding: 4rem;
+        .left {
+            img {
+                width: 300px;
+                margin-bottom: 50px;
+            }
+        }
+    }
     .resume-hw .info {
         padding: 0 2rem;
         h1 {

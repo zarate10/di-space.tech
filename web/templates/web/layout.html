@@ -10,9 +10,14 @@
         <meta http-equiv="description" name="description" content="{{ descripcion }}">
         <meta name="Copyright" content="Di Space Tech">
         <meta name="theme-color" content="#060712"/>
+        <meta property="og:site_name" content="Di Space Tech">
+        <meta property="og:title" content="Di Space Tech — {{ titulo }}" />
+        <meta property="og:description" content="{{ descripcion }}" />
+        <meta property="og:image" itemprop="image" content="https://i.imgur.com/xc3ArjP.png">
+        <meta property="og:type" content="website" />
         <!-- ICONO -->
-        <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon.ico">
-        <link rel="apple-touch-icon"sizes="16x16" href="./assets/img/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../static/media/favicon.ico">
+        <link rel="apple-touch-icon"sizes="32x32" href="../../static/media/favicon.ico">
         <!-- FONT AWESOME LINKS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- LINK CANÓNICO (MEJORAR EL RASTREO DE LA WEB) -->
@@ -20,9 +25,8 @@
         {% load static %}
         <link rel="stylesheet" href="{% static 'styles.css' %}">
         <title>Di Space Tech — {{ titulo }}</title>
-</head>
+    </head>
 <body>
-
     <header>
         <div class="logo {% if titulo == 'Inicio'%}filter-white{% endif %}">
            <img src="{% static 'media/IMAGOLOGO.svg' %}" id="logo" alt="LOGO DI-SPACE TECH">
@@ -42,10 +46,17 @@
                             <a href="{% url 'Inicio' %}" class="{% if titulo == 'Inicio'%}activate_nav{% endif %}">Inicio</a>
                         </li>
                         <li>
-                            <a href="{% url 'Servicios' %}" class="{% if titulo == 'Servicios'%}activate_nav{% endif %}">Servicios</a>
+                            <a href="{% url 'Nosotros' %}" class="{% if titulo == 'Nosotros'%}activate_nav{% endif %}">Nosotros</a>
+                        </li>
+                        <li style="padding: 15px 5px; text-transform: uppercase; letter-spacing: 4px; color: gray; font-size: 12px;">Servicios</li>
+                        <li>
+                            <a href="{% url 'Celulares' %}" class="{% if titulo == 'Celulares'%}activate_nav{% endif %}">Celulares</a>
                         </li>
                         <li>
-                            <a href="{% url 'Nosotros' %}" class="{% if titulo == 'Nosotros'%}activate_nav{% endif %}">Nosotros</a>
+                            <a href="{% url 'Computadoras' %}" class="{% if titulo == 'Computadoras'%}activate_nav{% endif %}">Computadoras</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'Digital' %}" class="{% if titulo == 'Digital'%}activate_nav{% endif %}">Digital</a>
                         </li>
                     </ul> 
                 </div>
@@ -57,9 +68,9 @@
                         <p><a href="mailto:contacto@di-space.tech" target="_blank">Paseo 105, Av. 3</a></p>
 
                         <div class="redes">
-                            <p><a href="#" target="_blank">Instagram</a></p>
-                            <p><a href="#" target="_blank">Facebook</a></p>
-                            <p><a href="#" target="_blank">Linkedin</a></p>
+                            <p><a href="https://www.instagram.com/dispacetech/" target="_blank">Instagram</a></p>
+                            <p><a href="https://www.facebook.com/dispacetech/" target="_blank">Facebook</a></p>
+                            <p><a href="https://www.linkedin.com/company/dispacetech" target="_blank">Linkedin</a></p>
                         </div>
                     </div>
                 </div>
@@ -87,14 +98,16 @@
                 <div class="box">
                     <div class="title">Navegación</div>
                     <a href="{% url 'Inicio' %}" class="{% if titulo == 'Inicio'%}activate_nav{% endif %}">Inicio</a>
-                    <a href="{% url 'Servicios' %}" class="{% if titulo == 'Servicios'%}activate_nav{% endif %}">Servicios</a>
                     <a href="{% url 'Nosotros' %}" class="{% if titulo == 'Nosotros'%}activate_nav{% endif %}">Nosotros</a>
+                    <a href="{% url 'Celulares' %}" class="{% if titulo == 'Celulares'%}activate_nav{% endif %}">Celulares</a>
+                    <a href="{% url 'Computadoras' %}" class="{% if titulo == 'Computadoras'%}activate_nav{% endif %}">Computadoras</a>
+                    <a href="{% url 'Digital' %}" class="{% if titulo == 'Digital'%}activate_nav{% endif %}">Digital</a>
                 </div>
                 <div class="box">
                     <div class="title">Redes</div>
-                    <a href="#" target="_blank">Instagram</a>
-                    <a href="#" target="_blank">Facebook</a>
-                    <a href="#" target="_blank">Linkedin</a>
+                    <a href="https://www.instagram.com/dispacetech" target="_blank">Instagram</a>
+                    <a href="https://www.facebook.com/dispacetech" target="_blank">Facebook</a>
+                    <a href="https://www.linkedin.com/company/dispacetech" target="_blank">Linkedin</a>
                 </div>
                 <div class="box newsletter">
                     <h2>Newsletter</h2>
@@ -114,7 +127,8 @@
             title: '{{ titulo }}'
         }
     </script>
+    <script src="{% static 'js/smooth.js' %}"></script>
     <script src="{% static 'js/sreveal.js' %}"></script> 
     <script src="{% static 'js/app.js' %}"></script>   
 </body>
-</html>
+</html> 

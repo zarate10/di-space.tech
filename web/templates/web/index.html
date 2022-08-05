@@ -19,7 +19,7 @@
     </section>
     <section class="resume-services" id="rservices">
         <div class="box left">
-            <img src="{% static 'media/phone.png' %}" alt="">
+            <img src="{% static 'media/phone.png' %}" alt="Reparación de celulares">
         </div>
         <div class="box right">
             <div class="info">
@@ -28,7 +28,7 @@
                 <div class="description">
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus alias rem earum iste quidem, omnis nemo quis deleniti odit libero saepe laboriosam doloribus enim! Ex perferendis ea provident nobis magnam.</p>
                 </div>
-                <button>Consultar</button>
+                <button onclick="location.href='{% url 'Celulares' %}'">Ver servicios</button>
             </div>
         </div>
     </section>
@@ -40,7 +40,7 @@
             <p class="title_light">Hardware</p>
             <h1 class="title">Lorem ipsum dolor sit amet.</h1>
             <p class="descrip">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia repellendus ullam neque voluptatum asperiores itaque porro est inventore, voluptatem vero, esse recusandae totam maxime voluptatibus iusto debitis.</p>
-            <button class="toTop">Consultar</button>
+            <button class="toTop" onclick="location.href='{% url 'Computadoras' %}'">Ver servicios</button>
         </div>
     </section>
     <section class="resume-software">

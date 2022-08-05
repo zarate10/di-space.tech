@@ -3,7 +3,7 @@ const $ = (element) => document.querySelector(element)
 // Menu
 
 let abierto = false;
-let $botonToggle = $('.icon-menu')
+const $botonToggle = $('.icon-menu')
 
 const $contenedorMenu = $('.menu-options')
 const $logo = $('#logo')
@@ -43,7 +43,7 @@ $botonToggle.addEventListener('click', () => {
 // bg 
 let $$ = document.getElementById('canvas').getContext('2d')
 let col = function (x, y, r, g, b) { 
-    $$.fillStyle =`rgb(${r - 20}, ${g - 20}, ${b - 20})`
+    $$.fillStyle =`rgb(${r - 50}, ${g - 50}, ${b - 50})`
     $$.fillRect(x, y, 1, 1)
 }
 
@@ -117,7 +117,7 @@ $btt.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
     animateTxt()
     window.onscroll = function() {
-        console.log(window.scrollY >= 1000)
+        // console.log(window.scrollY >= 1000)
         if (window.scrollY >= 300){
             document.querySelector('.back-to-top').style.marginBottom = "calc(100px + 1vh)"
         } else { 
@@ -151,4 +151,26 @@ document.addEventListener('DOMContentLoaded', () => {
     sr.reveal('.title_light', toBottom)
     sr.reveal('.descrip', toTop)
     sr.reveal('.toTop', toTop)
+
 })
+
+function viewData(titulo, img, alt, descrip, time, price){ 
+    if(titulo !== 'Otro'){
+        const $windowService = $('.servicio-detalle')
+        const $closeBtn = $('#cerrar')
+    
+        $('#sd-titulo').innerHTML = titulo
+        $('#sd-img').setAttribute('src', img)
+        $('#sd-img').setAttribute('alt', alt)
+        $('#sd-descrip').innerHTML = descrip
+        $('#sd-time').innerHTML = time
+        $('#sd-price').innerHTML = price
+    
+        $windowService.style.marginRight = '0'
+        console.log(titulo)
+        $closeBtn.addEventListener('click', () => {
+            $windowService.style.marginRight = '-100vw'
+        })
+    }
+    
+}

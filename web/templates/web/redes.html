@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- META TAGS PARA EL POSICIONAMIENTO -->
+    <meta name="author" content="Di Space Tech">
+    <meta name="keywords" content="DI SPACE TECH, REPARACIÓN DE CELULARES, VILLA GESELL, DI SPACE, DI SPACE, DIPACCE, AVE CELULARES, AVE, SITIOS WEB GESELL, CREACIÓN DE SITIOS WEB, villa gesell, gesell, reparacion notebooks, pc, di space tech, tech, tablet, celular, css, html, se rompio mi celular, telefono, electronica, cambio modulo, modulo celular, samsung, xiaomi, lg, nokia, phone, argentina, buenos aires, la costa, costa atlantica, maps, 2022, verano, pantalla rota, branding, community management, desarrollo web, pagina web, armado pc, pin de carga, telefono roto, memoria ram, compu lenta, notebook lenta, netbook lenta, netbuk, donde arreglar mi compu, pínamar, carilo, mar de las pampas, ostende, valeria del mar, celular, telefono, android, ios, gamer, ssd, hdd, Tech, tech, di, space, Space, DI, di-space, technology, dispace, space, espacio, tecnologia " />
+    <meta http-equiv="description" name="description" content="{{ descripcion }}">
+    <meta name="Copyright" content="Di Space Tech">
+    <meta name="theme-color" content="#060712"/>
+    <meta property="og:site_name" content="Di Space Tech">
+    <meta property="og:title" content="Di Space Tech — {{ titulo }}" />
+    <meta property="og:description" content="{{ descripcion }}" />
+    <meta property="og:image" itemprop="image" content="https://i.imgur.com/xc3ArjP.png">
+    <meta property="og:type" content="website" />
+    <!-- ICONO -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../../static/media/favicon.ico">
+    <link rel="apple-touch-icon"sizes="32x32" href="../../static/media/favicon.ico">
+    <!-- FONT AWESOME LINKS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- LINK CANÓNICO (MEJORAR EL RASTREO DE LA WEB) -->
+    <link rel="canonical" href="https://www.di-space.tech"/>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Di Space Tech — {{ titulo }}</title>
+</head>
+<body>
+    <div class="redes-wrapper">
+        <div class="logo">
+            <img src="{% static 'media/LOGO.svg' %}" id="logo" alt="LOGO DI-SPACE TECH">
+        </div>
+        <div class="links">
+            <a href="{% url 'Inicio' %}">Inicio</a>
+            <a href="https://www.facebook.com/dispacetech" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/dispacetech" target="_blank">Instagram</a>
+            <a href="https://www.linkedin.com/company/dispacetech" target="_blank">Linkedin</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -15,7 +15,6 @@ $m3: #8fb5ff;
 @mixin start_section(){
     width: 100%;
     min-height: 100vh;
-    margin-top: -21vh;
 }
 
 @mixin text-gradient($color){
