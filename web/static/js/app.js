@@ -156,14 +156,16 @@ function viewData(titulo, img, alt, descrip, time, price, consulta){
         $('#sd-contacto').setAttribute('href', `https://wa.me/5492255629005?text=${consulta}`)
     
         setTimeout(() => { 
+            $('#sd-wrapper').style.opacity = 1
             $windowService.style.marginRight = '0'
         }, 10)
     
         $closeBtn.addEventListener('click', () => {
-            $('#sd-wrapper').style.animation = 'desaparece 0.8s ease-in'
+            $('#sd-wrapper').style.animation = 'desaparece 1s ease-in'
             setTimeout(() => {
                 $windowService.style.marginRight = '-100vw'
-            }, 200)
+                $('#sd-wrapper').style.opacity = 0
+            }, 100)
         })
     }
     
