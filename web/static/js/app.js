@@ -153,7 +153,7 @@ function viewData(titulo, img, alt, descrip, time, price, consulta){
         $('#sd-descrip').innerHTML = descrip
         $('#sd-time').innerHTML = time
         $('#sd-price').innerHTML = price
-        $('#sd-contacto').setAttribute('href', `https://wa.me/5492255629005?text=${consulta}`)
+        $('#sd-contacto').setAttribute('href', `https://wa.me/5492255534329?text=${consulta}`)
     
         setTimeout(() => { 
             $('#sd-wrapper').style.opacity = 1

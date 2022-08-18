@@ -69,7 +69,7 @@ pc_data = {
         }, 
         {
             "titulo": 'Armado y presupuesto',
-            "img": "https://i.imgur.com/qyWqYpy.png",
+            "img": "https://i.imgur.com/ciqYRo3.png",
             "alt": "Servicio técnico pc",
             "descrip": "¿Te gustaría empezar en el mundo del gaming,? o tal vez necesitas una computadora para tu trabajo. No busques más, nosotros te proporcionaremos un presupuesto según tus                                  necesidades y si es el caso llevaremos ese presupuesto a la realidad y te ensamblaremos tu computadora personal. ",
             "tiempo": "1 Día + Envío componentes ",
@@ -78,7 +78,7 @@ pc_data = {
         },
         {
             "titulo": 'Instalación de S.O y apps',
-            "img": "https://i.imgur.com/RndV2Hp.png",
+            "img": "https://i.imgur.com/2LQgM6e.png",
             "alt": "Servicio técnico pc",
             "descrip": "Si usted compró una computadora y esta no posee un sistema operativo (Como puede ser Windows), no se preocupe nosotros nos ofrecemos para solucionar ese problema. <br>                            También usted puede requerir programas como Microsoft Word y Microsoft Excel, entre otros, los cuales nosotros brindamos.",
             "tiempo": "2 Días",
@@ -178,3 +178,9 @@ def page_not_found_view(req, exception):
         # "url": '{% url "Inicio" %}',
         "descripcion": '...'
     }, status = 404)
+
+def estado(req):
+    return render(req, "web/estado.html", {
+        "titulo": 'Estado',
+        "descripcion": '...'
+    })
