@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- META TAGS PARA EL POSICIONAMIENTO -->
+        <meta name="author" content="Di Space Tech">
+        <meta name="keywords" content="DI SPACE TECH, REPARACIÓN DE CELULARES, VILLA GESELL, DI SPACE, DI SPACE, DIPACCE, AVE CELULARES, AVE, SITIOS WEB GESELL, CREACIÓN DE SITIOS WEB, villa gesell, gesell, reparacion notebooks, pc, di space tech, tech, tablet, celular, css, html, se rompio mi celular, telefono, electronica, cambio modulo, modulo celular, samsung, xiaomi, lg, nokia, phone, argentina, buenos aires, la costa, costa atlantica, maps, 2022, verano, pantalla rota, branding, community management, desarrollo web, pagina web, armado pc, pin de carga, telefono roto, memoria ram, compu lenta, notebook lenta, netbook lenta, netbuk, donde arreglar mi compu, pínamar, carilo, mar de las pampas, ostende, valeria del mar, celular, telefono, android, ios, gamer, ssd, hdd, Tech, tech, di, space, Space, DI, di-space, technology, dispace, space, espacio, tecnologia " />
+        <meta http-equiv="description" name="description" content="{{ descripcion }}">
+        <meta name="Copyright" content="Di Space Tech">
+        <meta name="theme-color" content="#060712"/>
+        <meta property="og:site_name" content="Di Space Tech">
+        <meta property="og:title" content="Di Space Tech — {{ titulo }}" />
+        <meta property="og:description" content="{{ descripcion }}" />
+        <meta property="og:image" itemprop="image" content="https://i.imgur.com/xc3ArjP.png">
+        <meta property="og:type" content="website" />
+        <!-- ICONO -->
+        <link rel="icon" type="image/png" sizes="32x32" href="../../static/media/favicon.ico">
+        <link rel="apple-touch-icon"sizes="32x32" href="../../static/media/favicon.ico">
+        <!-- FONT AWESOME LINKS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- LINK CANÓNICO (MEJORAR EL RASTREO DE LA WEB) -->
+        <link rel="canonical" href="https://www.di-space.tech"/>
+        <link rel="stylesheet" href="{% static 'tickets/styles.css' %}">
+        <title>Di Space Tech — {{ titulo }}</title>
+    </head>
+<body>
+    <div class="wrapper-tickets">
+        <div class="head">
+            <img src="{% static 'media/IMAGOLOGO.svg' %}" alt="LOGO" width="100">
+            <h1>Estado de<br>servicios</h1>
+        </div>
+        <div class="items">
+            {% for c in clientes %}
+                <div class="ticket-user">
+                    <div class="img-box">
+                        <img src="/static/tickets/ticket.png">
+                    </div>
+                    <div class="data">
+                        <h3>{{ c.nombre }}</h3>
+                        <p>
+                            {{ c.service }}
+                            <br>
+                            {% if not c.completado %}
+                                <span style="color: orange">En reparación</span>
+                            {% else %} 
+                                <span style="color: green">Completado</span>
+                            {% endif %} 
+                        </p>
+                    </div>
+                    <div class="cliente-num">
+                        <p>#C00{{ c.id }}</p>
+                    </div>
+                </div>
+                <br>
+            {% endfor %}
+        </div>
+    </div>
+    <script src="{% static 'js/vanilla-tilt.js' %}"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".ticket-user"), {
+            max: 40,
+            speed: 10000
+        });
+    </script>
+</body>
+</html>

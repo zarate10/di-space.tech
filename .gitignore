@@ -3,3 +3,4 @@ prepros.config
 sysadm.html
 estado.html
 db.py
+db.sqlite3
